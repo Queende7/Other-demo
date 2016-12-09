@@ -1,0 +1,218 @@
+@charset "UTF-8";
+.banner604 {
+    position: relative; /*相对定位是占位置的，如果给高度，会撑开*/
+}
+.banner604 a {
+    position: absolute;/* 该定位不占位置 ,使用绝对定位时，子绝父相*/
+    /*
+    显示优先级： “定位> 浮动 > 标准流”。
+    如盒子都是定位，则最后一个优先级高。
+    */
+    top: 0;
+    left: 0;
+    width: 100%; /*定位的盒子若要通栏，铺满整个盒子，需设宽度100%*/
+    height: 604px;
+    background: url(../images/banner.jpg) no-repeat top center;
+}
+.main {
+    position: relative; /*与banner604都是相对定位，则后面的优先显示*/
+}
+.slider {
+    width: 730px;
+    height: 454px;
+    background-color: purple;
+    margin: 12px 0 0 220px;
+    float: left;
+    position: relative;
+}
+.slider .circle {
+    float: left;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    margin-left: -66px;
+}
+.circle li {
+    float: left;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #3E3E3E;
+    color: #fff;
+    text-align: center;
+    margin: 0 2px;
+    cursor: pointer;
+}
+.circle li.current {
+    background-color: #B61B1F;
+}
+.arrow {
+    display: none;
+}
+.arrow-l, .arrow-r,
+.arrow-ll, .arrow-rr
+{
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    width: 28px;
+    height: 62px;
+    background: rgba(0,0,0,0.2);
+    /*
+    1、CSS3样式：黑色背景~半透明（0.5）
+    2、opacity: 0.5;     opacity（opacity 不透明性; 费解; 难懂; 模糊）：让盒子半透明 ，里面的内容也半透明。
+    */
+    color: #fff;
+    text-align: center;
+    font:  500 22px/62px "SimSun", "宋体";
+}
+.arrow-l, .arrow-ll {
+    left: 0;
+}
+.arrow-r, .arrow-rr {
+    right: 0;
+}
+.arrow-l:hover, .arrow-r:hover,
+.arrow-ll:hover, .arrow-rr:hover
+{
+    background: rgba(0,0,0,.4);
+    color: #fff;
+}
+
+.news {
+    float: right;
+    width: 248px;
+    height: 452px;
+    margin-top: 12px;
+    border: 1px solid #E4E4E4;
+}
+.jd-news {
+    height: 200px;
+    border-bottom: 1px dashed #E4E4E4;  /*dashed:虚线*/
+}
+.jd-news .dt, .life .dt {
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 1px dotted #E8E8E7; /* dotted：点线*/
+}
+.jd-news .dt h3, .life .dt h3 {
+    float: left;
+    font: 14px/43px "microsoft yahei";
+    color: #666;
+    padding-left: 15px;
+}
+.jd-news .dt a {
+    float: right;
+    font: 13px/43px "宋体";
+    margin-right: 15px;
+}
+.jd-news .dd ul {
+    padding: 8px 0 0 15px;
+}
+.jd-news .dd li {
+    line-height: 28px ;
+}
+.jd-news .dd li span {
+    font-weight: 700;
+    margin-right: 5px;
+}
+.life {
+    height: 252px;
+    width: 248px;
+    overflow: hidden;
+}
+.life .dd {
+    border-top: 1px dotted #E8E8E7;
+    height: 251px;
+    overflow: hidden;
+}
+.life .dd ul {
+    width: 254px;   /*利用这个盒子将子盒子li完全装下不溢出(轮播图原理)，然后其父盒子再overflow。*/
+}
+.life .dd li {
+    float: left;
+    width: 62px;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    margin: -1px 0 0 -1px; /* 将重复的表框重叠在一起*/
+}
+.life .dd li a {
+    display: block;
+    height: 70px;
+    text-align: center;
+    padding-top: 42px;
+    position: relative;
+}
+.life li i {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 25px;
+    height: 25px;
+    background: url("../images/spriteicon.png") no-repeat;
+}
+
+/*以下重复代码已使用JS中的for循环优化解决，详见头部的JS*/
+/*.life-icon2 a i {
+    background-position: right -25px;
+}
+.life-icon3 a i {
+    background-position: right -50px;
+}
+.life-icon4 a i {
+    background-position: right -75px;
+}
+.life-icon5 a i {
+    background-position: right -100px;
+}
+.life-icon6 a i {
+    background-position: right -125px;
+}
+.life-icon7 a i {
+    background-position: right -150px;
+}
+.life-icon8 a i {
+    background-position: right -175px;
+}
+.life-icon9 a i {
+    background-position: right -200px;
+}
+.life-icon10 a i {
+    background-position: right -225px;
+}
+.life-icon11 a i {
+    background-position: right -250px;
+}
+.life-icon12 a i {
+    background-position: right -275px;
+}*/
+.life .song {
+    background: url("../images/song.png") no-repeat right top;
+}
+.life .mian {
+    background: url("../images/mian.png") no-repeat right top;
+}
+
+
+/*11 huodong*/
+.todays {
+    position: relative; /*都是定位的盒子，最后的优先级高，优先显示*/
+}
+.night {
+    margin: 10px 0 28px 0;
+}
+.night-r {
+    width: 1000px;
+    height: 160px;
+    overflow: hidden;
+    float: right;
+    position: relative;
+}
+.night-r ul {
+    width: 500%;    /*防止子盒子横向放不下*/
+}
+.night-r li {
+    float: left;
+    margin-right: 1px;
+}
