@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片旋转</title>
+	<style type="text/css">
+		div {
+			display: inline-block;
+			transition: all 0.5s;/* 过渡，配合使用，显示动画效果*/
+		}
+	
+		.rotateDiv {
+			transform: rotate(180deg); /*变换*/
+		}
+	</style>
+	<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("div").on("click",function() {
+				$(this).toggleClass("rotateDiv"); // 点击添加事件、再点击删除事件，可通过操作 “类”进行操作。
+			})
+
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<img src="zhuan.jpg">
+	</div>
+</body>
+</html>

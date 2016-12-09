@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装 可视区的高度、宽度获取 again</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function client(){
+		if(window.innerWidth != null){
+			return {
+				width: window.innerWidth,
+				height: window.innerHeight
+			}
+		}else if(document.compatMode == "CSS1Compat"){
+			return {
+				width: document.documentElement.clientWidth,
+				height: document.documentElement.clientHeight
+			}
+		}else{
+			return {
+				width: document.body.clientWidth,
+				height: document.body.clientHeight
+			}
+		}
+	}
+</script>

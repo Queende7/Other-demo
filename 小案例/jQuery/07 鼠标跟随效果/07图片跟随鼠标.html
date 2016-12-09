@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05图片跟随鼠标.html</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		html {
+			background-color: teal;
+		}
+		img {
+			position: absolute;
+		}
+	</style>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () {
+			$(document).mousemove(function(e){
+				$("img").css({
+					left : e.pageX,
+					top: e.pageY
+				});
+				e.preventDefault();
+				e.stopPropagation();
+			});
+		});
+	</script>
+</head>
+<body>
+	<img src="imgs/1.gif" height="440" width="150" alt="">
+</body>
+</html>

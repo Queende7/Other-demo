@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证文件格式是否正确</title>
+</head>
+<body>
+	<input type="file" name="" id="file"> <!--  文件域 -->
+</body>
+</html>
+<script>
+	var file = document.getElementById("file");
+	file.onchange = function(){
+		var path= this.value;
+		var suffix = path.substr(path.lastIndexOf(".")).toUpperCase();
+		suffix == ".JPG" || suffix == ".PNG" ? alert("格式正确！") : alert("格式错误！");
+	}
+</script>

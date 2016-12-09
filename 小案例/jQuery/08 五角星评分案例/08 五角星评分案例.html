@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五角星评分案例</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		.conment {
+			list-style: none;
+			/*font-size: 0;*/
+		}
+		.conment li {
+			/*display: inline-block;*/
+			float: left;
+			font-size: 40px;
+			/*color: teal;*/
+			color: red; 
+		}
+	</style>
+	<script src="../../jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function(){
+			var wjx_sel = "★",
+				wjx_none = "☆";
+			$(".conment").on("mouseenter", "li", function(){
+				// prevAll 前面所有的兄弟节点
+				/*$(this).text(wjx_sel).prevAll().text(wjx_sel);
+				$(this).nextAll().text(wjx_none);*/
+
+				// 链式编程---利用end()可结束当前调用的链，恢复上一级调用链（回到最开始的jQuery对象~this），防止链式编程断掉。
+				// $(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+				$(this).text(wjx_sel)
+					.prevAll()
+					.text(wjx_sel)
+					.end()  // 结束prevAll ,回到$(this)链。
+					.nextAll()
+					.text(wjx_none);
+
+			// 第二步： 记录用户点击的那个五角星
+			// 给点击的li标签添加一个样式类
+			}).on("click", "li", function(){
+				$(this).addClass("clicked").siblings().removeClass("clicked");
+			
+			// 第三步：当鼠标移开评分控件时，把clicked（包括自己）之前的五角星全部变成实心，后面变成空心。
+			}).on("mouseleave", function(){
+				// 先给所有五角星都变成空心
+				// 隐式迭代
+				$(".conment li").text(wjx_none);
+
+				$(".clicked").text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+
+			});
+
+
+
+
+		});
+	</script>
+<body>
+	<ul class="conment">
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+		<li>☆</li>
+	</ul>
+</body>
+</html>

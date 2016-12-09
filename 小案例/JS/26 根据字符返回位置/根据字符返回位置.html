@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>根据字符返回位置</title>
+</head>
+<body>
+	字符串：<input type="text" name="" id="txt">
+	索引的字符串：<input type="text" name="" id="index">
+	<button id="btn1">从前面开始索引</button>
+	<button id="btn2">从后面开始索引</button>
+</body>
+</html>
+<script>
+	function $(id){ return document.getElementById(id); }
+	// 返回前面起第一个字符的位置
+	$("btn1").onclick = function(){
+		alert($("txt").value.indexOf($("index").value));
+	}
+	// 返回后面起第一个字符的位置
+	$("btn2").onclick = function(){
+		alert($("txt").value.lastIndexOf($("index").value));
+	}
+</script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证文件格式是否正确 again</title>
+</head>
+<body>
+	<input type="file" id="file">
+</body>
+</html>
+<script>
+	var file = document.getElementById("file");
+	file.onchange = function(){
+		var path = this.value; // 文件路径名称。
+		var suffix = path.substr(path.lastIndexOf(".")).toUpperCase(); // 获取后缀名。、
+		// if else 运算符 可用 三元运算符 替换。
+		suffix == ".JPG" || suffix == ".PNG" ? alert("格式正确！") : alert("格式错误！");		
+	}
+</script>

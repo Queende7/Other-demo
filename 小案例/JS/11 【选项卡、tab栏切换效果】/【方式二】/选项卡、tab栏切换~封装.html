@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab栏切换~封装</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		.box {
+			width: 400px;
+			margin: 100px auto;
+			border: 1px solid #ccc;
+		}
+		.mt {
+			width: 100%;
+			height: 30px;
+		}
+		.mt span {
+			display: inline-block;
+			width: 90px;
+			margin-right: 6px;
+			font: 14px/30px "yahei";
+			background-color: pink;
+			text-align: center;
+		}
+		.mt .current {
+			color: #fff;
+			background-color: purple;
+		}
+		.mb ul {
+			list-style: none;
+		}
+		.mb li {
+			width: 400px;
+			height: 360px;
+			text-align: center;
+			font: 16px/360px "yahei";
+			color: #fff;
+			background-color: purple;
+			display: none;
+		}
+		.mb .current_01 {
+			display: block;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			function tab(obj){
+				var target = document.getElementById(obj);
+				var spans = target.getElementsByTagName("span");
+				var lis = target.getElementsByTagName("li");
+				for(var i=0,len=spans.length;i<len;i++){
+					spans[i].index = i;
+					spans[i].onmouseover = function(){
+						for(var j=0;j<len;j++){
+							spans[j].className= "";
+							lis[j].className= "";
+						}
+						this.className= "current";
+						lis[this.index].className= "current_01";
+					}
+				}
+			} 
+
+			tab("one");
+			tab("two");
+			tab("three");
+			tab("four");
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="one">
+		<div class="mt">
+			<span class="current">新闻</span>
+			<span>体育</span>
+			<span>娱乐</span>
+			<span>八卦</span>
+		</div>
+		<div class="mb">
+			<ul>
+				<li class="current_01">新闻模块</li>
+				<li>体育模块</li>
+				<li>娱乐模块</li>
+				<li>八卦模块</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="box" id="two">
+		<div class="mt">
+			<span class="current">新闻</span>
+			<span>体育</span>
+			<span>娱乐</span>
+			<span>八卦</span>
+		</div>
+		<div class="mb">
+			<ul>
+				<li class="current_01">新闻模块</li>
+				<li>体育模块</li>
+				<li>娱乐模块</li>
+				<li>八卦模块</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="box" id="three">
+		<div class="mt">
+			<span class="current">新闻</span>
+			<span>体育</span>
+			<span>娱乐</span>
+			<span>八卦</span>
+		</div>
+		<div class="mb">
+			<ul>
+				<li class="current_01">新闻模块</li>
+				<li>体育模块</li>
+				<li>娱乐模块</li>
+				<li>八卦模块</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="box" id="four">
+		<div class="mt">
+			<span class="current">新闻</span>
+			<span>体育</span>
+			<span>娱乐</span>
+			<span>八卦</span>
+		</div>
+		<div class="mb">
+			<ul>
+				<li class="current_01">新闻模块</li>
+				<li>体育模块</li>
+				<li>娱乐模块</li>
+				<li>八卦模块</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

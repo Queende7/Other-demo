@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>返回当前对象样式的函数 封装</title>
+	<style>
+		#demo {
+			width: 100px;
+			height: 200px;
+			background-color: pink;
+			opacity: 0.4;
+			position: absolute;
+			left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>
+<script>
+	var demo = document.getElementById("demo");
+
+	// 封装函数： 得到对象的样式~~得到内嵌或者外链的样式
+	/*function getStyle(obj,attr){  // 谁的   哪个属性
+		if(obj.currentStyle){ 
+			return obj.currentStyle[attr];  // ie  opera  常用这个
+		}else{
+			return window.getComputedStyle(obj,null)[attr]; // w3c 标准浏览器
+		}
+	}*/
+
+	function getStyle(obj,attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		}else{
+			return window.getComputedStyle(obj,null)[attr];
+		}
+	}
+
+	console.log(getStyle(demo,"position"));
+</script>

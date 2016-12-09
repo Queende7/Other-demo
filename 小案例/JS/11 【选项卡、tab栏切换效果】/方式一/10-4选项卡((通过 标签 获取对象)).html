@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title></title>
+		<style>
+			#card{
+				width:300px;
+				height:200px;
+			}
+			
+			#tit{
+				width:100%;
+				float:left;
+				height:30px;
+				line-height:30px;
+			}
+			
+				#tit h3{
+					margin:0px;
+					padding:0px;
+					width:80px;
+					background:#ccc;
+					float:left;
+					line-height:30px;
+					text-align:center;
+					border:2px solid white;
+					font-size:12px;
+					color:white;
+				}
+				#tit .title{
+					border:2px solid #888;
+					background:#888;
+				}
+			#content{
+				float:left;
+				width:100%;
+				height:170px;
+				background:#888;
+				color:white;
+			}
+			
+			#content div{
+				display:none;
+			}
+			#content .one{
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="card">
+			<div id="tit">
+				<h3 onmouseover="show(0)" class="title">第一项</h3>
+				<h3 onmouseover="show(1)">第二项</h3>
+				<h3 onmouseover="show(2)">第三项</h3>
+			</div>
+			
+			<div id="content">
+				<div class="one">
+					<ul>
+						<li>aaaaaaa</li>
+						<li>aaaaaaa</li>
+						<li>aaaaaaa</li>
+						<li>aaaaaaa</li>
+						<li>aaaaaaa</li>
+						<li>aaaaaaa</li>
+					</ul>
+				</div>				
+				
+				<div class="two">
+					<ul>
+						<li>bbbbbb</li>
+						<li>bbbbbb</li>
+						<li>bbbbbb</li>
+	
+					</ul>
+				</div>				
+				
+				<div class="three">
+					<ul>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+						<li>ccccccccccc</li>
+
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+
+		
+		<script>
+			var h3os=document.getElementsByTagName("h3");
+			var cdivs=document.getElementById("content").getElementsByTagName("div"); //先获得区域content---document.getElementById("content")，再取其中对象。
+			//alert(h3os.length);
+			//alert(cdivs.length);
+			function show(num){   /*也可利用“ 排他思想~~~ 首先干掉所有人，   剩下我自己 ”*/
+				//alert(num);
+				for(var i=0;i<h3os.length;i++){
+					if(i==num){
+						h3os[num].className="title"; //多个样式同时操作：className
+						cdivs[num].style.display="block";  //如aobj.style.fontSize="2cm"; 操作单行样式。
+					}else{
+						h3os[i].className=""; //类的样式清空。
+						cdivs[i].style.display="none"; //逐个操作样式。
+					}
+				}
+			}
+		</script>
+		
+	</body>
+
+
+</html>

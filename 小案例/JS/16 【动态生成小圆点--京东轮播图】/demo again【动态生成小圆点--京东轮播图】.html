@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东轮播图~动态生成小圆点 again</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		ul { list-style: none; }
+		.box {
+			width: 730px;
+			height: 454px;
+			margin: 100px auto;
+			overflow: hidden;
+			position: relative;
+		}
+		.circle {
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			margin-left: -78px;
+		}
+		.circle span {
+			float: left;
+			width: 18px;
+			height: 18px;
+			margin: 0 4px;
+			border-radius: 50%;
+			background: rgba(0,0,0,.4);
+			font: 14px/18px "yahei";
+			text-align: center;
+			color: white;
+		}
+		.circle span.current {
+			background-color: purple;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+
+			var scroll = document.getElementById("scroll");
+			var circle = document.createElement("div"); //1、创建新节点。
+			circle.setAttribute("class","circle");//2、修改节点属性和内容。
+			scroll.appendChild(circle); //3、添加节点。
+			
+			var uls = document.getElementById("uls");
+			var lis = uls.children; //获取ul的所有子节点li
+			for(var i=0;i<lis.length;i++){
+				var spans = document.createElement("span"); //根据li节点的长度，进行创建节点
+				spans.innerHTML= i+1; //修改内容
+				circle.appendChild(spans);  //添加节点。
+			}
+
+			var child = circle.children; //circle节点下的所有子节点。
+			child[2].setAttribute("class","current"); //修改子节点数组中的一个节点属性。
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="scroll">
+		<div class="slider">
+			<ul id="uls">
+				<li><img src="images/11.jpg" alt=""></li>
+				<li><img src="images/22.jpg" alt=""></li>
+				<li><img src="images/33.jpg" alt=""></li>
+				<li><img src="images/44.jpg" alt=""></li>
+				<li><img src="images/55.jpg" alt=""></li>
+				<li><img src="images/66.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

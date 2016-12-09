@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装自己的 scrollTop left </title>
+	<style>
+		body {
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+
+	// 封装自己的 scrollTop left 。
+	function scroll(){  
+		// var json = { left:10, right: 10 } 变异
+		// json.left     json.top
+		if(window.pageYOffset != null){ // IE9 + 其他浏览器。
+			return {
+				left: window.pageXOffset,   // 采用 json 的形式编写，方便添加属性。
+				top: window.pageYOffset
+			}
+		}else if(document.compatMode == "CSS1Compat"){  // 声明了 DTD。
+			// 火狐 、其他正常浏览器。
+			 /* 检测是不是怪异模式的浏览器---是否声明 <!DOCTYPE html>
+			 	document.compatMode === "BackCompat"
+				BackCompat  未声明
+				CSS1Compat  已经声明*/
+			return {
+				left: document.documentElement.scrollLeft,
+				top: document.documentElement.scrollTop
+			}
+		}else{
+			return {
+				// 剩下的肯定是 诡异模式的（没有声明 DTD  <DOCTYPE	>）
+				left: document.body.scrollLeft,
+				top: document.body.scrollTop
+			}
+		}	
+	}
+
+	// 使用：
+	window.onscroll = function(){
+		console.log(scroll().top);
+	}
+</script>

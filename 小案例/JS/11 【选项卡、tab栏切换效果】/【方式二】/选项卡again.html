@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	选项卡again</title>
+	<style>	
+		.box {
+			width: 400px;	
+			margin: 100px auto;
+			border: 1px solid #ccc;
+		}
+		.box button {
+			text-align: center;
+			margin: 0 3px;
+			border: 0 none;
+		}
+		.bottom div {
+			width: 100%;	
+			height: 300px;	
+			background-color: pink;
+			display: none;
+		}
+
+		.pink {
+			background-color: pink;
+		}
+	</style>
+
+	<script>	
+		window.onload = function(){
+			var btns = document.getElementsByTagName("button");
+			var divs = document.getElementById("divs").getElementsByTagName("div");
+			for(var i=0,len=btns.length;i<len;i++){
+				btns[i].index= i;
+				btns[i].onclick = function(){
+					for(var j=0;j<len;j++){
+						btns[j].className= "";
+					}
+					this.className= "pink";
+				
+					for(var i=0;i<divs.length;i++){
+						divs[i].style.display= "none";
+					}
+					divs[this.index].style.display= "block";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">	
+			<button>第1个</button>
+			<button>第2个</button>
+			<button>第3个</button>
+			<button>第4个</button>
+			<button>第5个</button>
+			<button>第6个</button>
+		</div>	
+		<div class="bottom" id="divs">
+			<div style="display: block">1号 盒子</div>
+			<div>2号 盒子</div>
+			<div>3号 盒子</div>
+			<div>4号 盒子</div>
+			<div>5号 盒子</div>
+			<div>6号 盒子</div>
+		</div>
+	</div>
+</body>
+</html>

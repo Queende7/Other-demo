@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全选、取消、反选</title>
+	<style>
+		ul {
+			list-style: none;
+		}
+		input {
+			margin:5px 20px;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			var btns = document.getElementsByTagName("button");/*获取所有的button*/
+			var inputs = document.getElementById("bottom").getElementsByTagName("input"); /*获取所有bottom里面所有的input*/
+
+			//方法一：（代码相似，重复，可简化为方法二：函数）
+			/*btns[0].onclick = function(){
+				for(var i=0;i<inputs.length;i++){
+					inputs[i].checked= true;  //注：true、false是常量，可不加引号.
+				}
+			}
+			btns[1].onclick = function(){
+				for(var i=0;i<inputs.length;i++){
+					inputs[i].checked= false;
+				}
+			}
+			btns[2].onclick = function(){
+				for(var i=0;i<inputs.length;i++){
+					if(inputs[i].checked){
+						inputs[i].checked= false;
+					}else{
+						inputs[i].checked= true;
+					}
+				}
+			}*/
+
+			//方法二： 函数。
+			function all(flag){
+				for(var i=0;i<inputs.length;i++){
+					inputs[i].checked = flag;
+				}
+			}
+			btns[0].onclick= function(){
+				all(true);
+			}
+			btns[1].onclick= function(){
+				all(false);  /*注：false不要加引号。*/
+			}			
+			btns[2].onclick= function(){
+				for( var i=0;i<inputs.length;i++){
+					inputs[i].checked ? inputs[i].checked= false : inputs[i].checked= true     //三元运算符。
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="top">
+		<button>全选</button>
+		<button>取消</button>
+		<button>反选</button>		
+	</div>
+	<div id="bottom">
+		<ul>
+			<li><label for="in01">选项1:<input type="checkbox" id="in01"></label></li>
+			<li><label for="in02">选项2:<input type="checkbox" id="in02"></label></li>
+			<li><label for="in03">选项3:<input type="checkbox" id="in03"></label></li>
+			<li><label for="in04">选项4:<input type="checkbox" id="in04"></label></li>
+			<li><label for="in05">选项5:<input type="checkbox" id="in05"></label></li>
+			<li><label for="in06">选项6:<input type="checkbox" id="in06"></label></li>
+			<li><label for="in07">选项7:<input type="checkbox" id="in07"></label></li>
+			<li><label for="in08">选项8:<input type="checkbox" id="in08"></label></li>
+		</ul>
+	</div>
+</body>
+</html>

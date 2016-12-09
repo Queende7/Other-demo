@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 3D转换</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #FFF;
+			perspective: 300px; /* 视距---透视；定义3D视觉的角度，让底下子元素使用3D特效时能够完整显示。 */
+			perspective-origin: 100px 100px; /*消失点---用来定义X和Y轴为基础的3D位置(定义初始位置)*/
+
+			/*
+				perspective和perspective-origin受影响的是子元素，而非元素本身,故需作用在其父元素上。
+					最后就可以对div做3D的效果(rotateX和rotateY)
+			*/
+		}
+
+		img {
+			transition: all 3s;
+		}
+		img:hover {
+			transform: rotateX(90deg);
+		}
+	</style>
+</head>
+<body>
+	<img src="images/musicb.jpg" alt=""/>
+</body>
+</html>

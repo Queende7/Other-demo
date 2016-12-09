@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单更换皮肤</title>
+	<script>
+		window.onload = function(){
+			var huantu = document.getElementById("one");
+			huantu.onchange = function(){
+				switch(this.value){
+					case "1":
+						document.body.style.backgroundImage= "url(images/01.jpg)";
+						break;
+					case "2":
+						document.body.style.backgroundImage= "url(images/02.jpg)";
+						break;
+					case "3":
+						document.body.style.backgroundImage= "url(images/03.jpg)";
+						break;
+					case "4":
+						document.body.style.backgroundImage= "url(images/04.jpg)";
+						break;
+				}
+			}
+		
+		}
+	</script>
+</head>
+<body>
+	<select name="" id="one">
+		<option value="1">春意绵绵</option>
+		<option value="2">夏日炎炎</option>
+		<option value="3">秋声瑟瑟</option>
+		<option value="4">冬雪恺恺</option>
+	</select>
+</body>
+</html>

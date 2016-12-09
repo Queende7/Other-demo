@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单焦点图 css部分</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		ul,ol { list-style: none; }
+		img { display: block; }
+		.box {
+			width: 500px;
+			height: 200px;
+			padding: 7px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+			position: relative;
+		}
+		#show {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		#show ul {
+			width: 800%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#show ul li {
+			float: left;
+		}
+		.box ol {
+			position: absolute;
+			right: 11px;
+			bottom: 11px;
+		}
+		.box ol li {
+			float: left;
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			text-align: center;
+			line-height: 20px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		.box .current {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div id="show">
+			<ul>
+				<li><img src="images/taobao/1.jpg" alt=""></li>
+				<li><img src="images/taobao/2.jpg" alt=""></li>
+				<li><img src="images/taobao/3.jpg" alt=""></li>
+				<li><img src="images/taobao/4.jpg" alt=""></li>
+				<li><img src="images/taobao/5.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	// 动画封装函数：
+	function animate(obj,target){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var speed = obj.offsetLeft < target ? 15 : -15;
+			var result = obj.offsetLeft - target;
+			obj.style.left = obj.offsetLeft + speed + "px";
+			if(Math.abs(result) <= 15){
+				clearInterval(obj.timer);
+				obj.style.left= target + "px";
+			}
+
+		},10)
+	}
+
+	// 获取元素
+	var Show = document.getElementById("show");
+	var ul = Show.children[0];
+	var ulLis = ul.children;
+	var box = Show.parentNode;
+
+	// 操作元素
+	 // 1. 克隆完毕
+	ul.appendChild(ulLis[0].cloneNode(true));
+	// 2. 创建 ol  和  小 li
+	var ol = document.createElement("ol");// 生成的是ol
+	Show.appendChild(ol);// 把ol 追加到  box 最后面
+	for(var i=0;i<ulLis.length-1;i++){
+		var li = document.createElement("li");
+		li.innerHTML= i+1;//  给里面小的li 文字  1 2 3 
+		ol.appendChild(li);  // 添加到 ol 里面
+	}
+	ol.children[0].className = "current";
+
+	//3. 开始动画部分
+	var olLis = ol.children;
+	for(var i=0;i<olLis.length;i++){
+		olLis[i].index = i;  // 获取各索引号。
+		olLis[i].onmouseover = function(){
+			for(var j=0;j<olLis.length;j++){
+				olLis[j].className = "";
+			}
+			this.className= "current";
+			animate(ul,-this.index*500);// 调用动画函数  第一个参数  谁动画     第二个  走多少
+			square = key = this.index;// 当前的索引号为主
+		}
+	}
+
+	//  4. 添加定时器
+	var timer = null;
+	var key = 0 ; // 存放播放的张数
+	var square = 0 ;// 控制小方块。
+	timer = setInterval(autoPlay,1000);
+	function autoPlay(){
+		// a、 图片自动滚动：
+		key++; // 先 ++
+		if(key > ulLis.length - 1){  // 后 判断
+			ul.style.left= 0;  // 迅速调回
+			key = 1; // 因第6张就是第1张，第六张播完后，立刻播第二张。
+		}
+		animate(ul,-key*500); // 再执行---图片自动滚动。
+
+		// b、小方块滚动：
+		square++; // 先 ++ 
+		if(square > olLis.length-1){ // 后 判断。(索引号由 0 开始。)
+			square = 0;
+		} 
+		for(var i=0;i<olLis.length;i++){ // 先清除所有。
+			olLis[i].className = "";
+		}
+		olLis[square].className = "current"; // 留下当前。
+	}
+
+	// 5. last最后  
+	// 鼠标经过大盒子要停止定时器
+	box.onmouseover = function(){
+		clearInterval(timer);
+	}
+	// 鼠标离开大盒子重新启动 轮播图定时器。
+	box.onmouseout  = function(){
+		timer = setInterval(autoPlay,1000);
+	}
+</script>

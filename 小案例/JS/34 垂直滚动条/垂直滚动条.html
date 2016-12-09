@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>垂直滚动条</title>
+	<style>
+		.box {
+            width: 300px;
+            height: 500px;
+            border: 1px solid red;
+            margin:100px;
+            position: relative;
+        }
+        .content {
+            height: auto;
+            padding: 5px 18px 12px 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .scroll {
+            width: 18px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #eee;
+        }
+        .bar {
+            width: 100%;
+            height: 100px;
+            background-color: red;
+            cursor: pointer;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="content">
+			 文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+       文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+       文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+     文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分文字内容部分
+    
+     
+		</div>
+		<div class="scroll">
+			<div class="bar"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	var box = document.getElementById("box");
+	var content = box.children[0];
+	var scroll = box.children[1];
+	var bar = scroll.children[0];
+	// 动态设置滚动条长度计算公式： 容器高度 / 内容高度  * 容器高度。
+	// box 是 内容盒子的一半，那么红色盒子也是box盒子的一半。
+	var barHeight = box.offsetHeight/content.offsetHeight * box.offsetHeight;
+	bar.style.height= barHeight+"px";
+
+	// 下面开始 拖动 红色盒子。
+	startScroll(bar,content);
+	function startScroll(start,move){
+
+		start.onmousedown = function(event){
+			var event = event || window.event;
+			var t = event.clientY - this.offsetTop;  // offsetTop  是红色盒子到父盒子 顶部的距离。
+			var that = this;
+			document.onmousemove = function(event){
+				var event = event || window.event;
+				var barTop = event.clientY - t; // 红色盒子移动的距离、
+				// content 内容盒子移动的距离。
+				// （内容盒子高度 - 大盒子高度） / （大盒子高度 - 红色盒子高度） * 红色盒子移动的数值。
+				var contentTop = (move.offsetHeight-box.offsetHeight)/(box.offsetHeight-that.offsetHeight) * barTop;
+				if(barTop < 0){
+					barTop = 0;
+				}else if(barTop > scroll.offsetHeight - that.offsetHeight)
+				// 大于 大盒子的高度 - 红色盒子的高度。
+				{
+					barTop = scroll.offsetHeight - that.offsetHeight + "px";
+				}else{
+					move.style.top = - contentTop+"px"; // 往上走，是负值。
+				}
+				that.style.top= barTop+ "px";
+				window.getSelection ? window.getSelection().removeAllRanges() : window.selection.empty();
+				// 防止拖动滑动时选中文字。
+			}
+			document.onmouseup = function(){
+				document.onmousemove = null;
+			}
+		}
+	}
+</script>

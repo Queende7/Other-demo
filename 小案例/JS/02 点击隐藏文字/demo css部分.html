@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索框 点击隐藏文字 css部分</title>
+    <style>
+        input,button {
+            border: 0 none;
+            padding: 0;
+        }
+        .search {
+            width: 258px;
+            height: 40px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+        .search input {
+            float: left;
+            width: 208px;
+            height: 40px;
+            background: url(images/left.jpg) no-repeat;
+            padding-left: 8px;
+            outline-style: none;/*  去除点击时出现的默认蓝色框框 */
+            color: #ccc;
+        }
+        .search button {
+            float: left;
+            width: 42px;
+            height: 40px;
+            background: url(images/right.jpg) no-repeat;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="text" value="请输入...">
+        <button></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖动水平滚动条 again</title>
+	<style>
+		* { padding: 0; margin: 0; }
+		.scroll {
+			width: 400px;
+			height: 8px;
+			margin: 100px;
+			background-color: #ccc;
+			position: relative;
+		}
+		.scr {
+			width: 10px;
+			height: 22px;
+			background-color: #369;
+			position: absolute;
+			top: -7px;
+			left: 0;
+			cursor: pointer;
+		}
+		.bg {
+			width: 0;
+			height: 100%;
+			background-color: #369;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="scroll" id="scroll">
+		<div class="scr"></div>
+		<div class="bg"></div>
+	</div>
+	<div id="mask"></div>
+</body>
+</html>
+<script>
+	var scroll = document.getElementById("scroll");
+	var scr = scroll.children[0];
+	var bg = scroll.children[1];
+	var mask = document.getElementById("mask");
+
+	scr.onmousedown = function(event){
+		var event = event || window.event;
+		var leftVal = event.clientX - this.offsetLeft;
+		var that = this;
+
+		document.onmousemove = function(event){
+			var event = event || window.event;
+			that.style.left= event.clientX - leftVal + "px";
+			var Left = parseInt(that.style.left);
+			if(Left < 0){
+				Left = 0;
+			}else if(Left > 390){
+				Left = "390px";
+			}
+			that.style.left = Left;
+			bg.style.width= that.style.left;
+			mask.innerHTML= "此时走了："+(parseInt(Left)/390*100).toFixed(2)+"%";
+		}
+		document.onmouseup = function(){
+			document.onmousemove = null;
+		}
+	}
+
+
+</script>

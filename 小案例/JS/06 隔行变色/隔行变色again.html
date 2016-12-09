@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色 again</title>
+	<style>
+		.box {
+			width: 300px;
+		}
+		.box li {
+			list-style: none;
+			line-height: 30px;
+		}
+		.box li span {
+			margin:0 5px; 
+		}
+
+		.current {
+			background-color: #ccc !important;
+		}
+	</style>
+
+	<script>
+		window.onload =function(){
+			var lis =document.getElementsByTagName("li");
+
+			for(var i=0,len=lis.length;i<len;i++){
+				if(i%2 ==0){
+					lis[i].style.backgroundColor= "#eee";
+				}
+				lis[i].onmouseover = function(){
+					this.className= "current";
+				}
+				lis[i].onmouseout = function(){
+					this.className= "";
+				}
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+			<li>
+				<span>上证指数</span>
+				<span>4231</span>
+				<span>10-13</span>
+				<span>0.17%</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

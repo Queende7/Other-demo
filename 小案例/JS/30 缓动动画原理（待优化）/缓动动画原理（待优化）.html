@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>缓动动画原理（待优化）</title>
+	<style>
+		.box {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+			top: 100px;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">开始</button>
+	<div class="box" id="BOX"></div>
+</body>
+</html>
+<script>
+	var btn = document.getElementById("btn");
+	var box = document.getElementById("BOX");
+	var leader = 0; // 初始位置。
+	var target = 500; // 停止位置。
+	var timer = null;
+
+	btn.onclick = function(){
+		timer = setInterval(function(){
+			leader = leader + (target - leader)/10; // 缓动动画原理。
+			box.style.left= leader + "px";
+		},30);
+	}
+</script>

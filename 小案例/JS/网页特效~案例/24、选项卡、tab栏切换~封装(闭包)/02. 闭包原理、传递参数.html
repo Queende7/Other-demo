@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 闭包：用一个函数 去访问 另外一个函数的内部变量的方式(一般函数里面 return 函数)
+    function Fun(x) {
+        return function(y) {
+            console.log(x+y);
+        }
+    }
+
+    var obj = Fun(4);
+    // 相当于  obj = function() {console.log(x)}
+    obj();
+    obj(2);
+</script>

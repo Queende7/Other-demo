@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>屏幕缩放事件（闭包版本）</title>
+</head>
+<body>
+	<div id="demo"></div>
+</body>
+</html>
+<script>
+	var demo = document.getElementById("demo");
+	var num = 0; // 验证窗口大小 变化次数。
+	window.onresize = throttle(function(){
+		demo.innerHTML = window.innerWidth || document.documentElement.clientWidth; // 兼容ie678 。
+		num++;
+		console.log(num);
+	},300);
+
+	function throttle(fn,delay){  // 闭包 ，节流
+		var timer = null; 
+		return function(){
+			clearTimeout(timer);
+			timer = setTimeout(fn,delay);
+		}
+	}
+</script>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星座运势</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.box {
+			width: 278px;
+			padding-bottom: 6px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+			font-family: "宋体";
+		}
+		.hd,.bd,.ft {
+			padding: 0 19px;
+		}
+		.box .hd h2 {
+			font-size: 14px;
+			line-height: 35px;
+			color: #0873c0;
+		}
+		.hd h2 a {
+			text-decoration: none;
+			color: #0873c0;
+		}
+		
+		.bd {
+			width: 240px;
+			height: 50px;
+			overflow: hidden;  /*清除浮动*/
+		}
+		.bd .bd-t {
+			float: left;
+			width: 50px;
+			height: 50px;
+			background: url(images/constellation.png) no-repeat 0 -300px;
+		}
+		.bd .bd-b {
+			float: right;
+			width: 180px;
+			height: 50px;
+		}
+		#sele {
+			cursor: pointer;
+		}
+		.bd .bd-bb {
+			width: 100%;
+			margin-top: 6px;
+		}
+		.yunshi {
+			margin-top: 2px;
+			width: 80px;
+			height: 13px;
+			display: inline-block;
+			background: url(images/star.png) no-repeat;
+			position: relative;
+		}
+		.star {
+			/*float: left;*/  /*利用浮动或者绝对定位*/
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 0px;
+			height: 13px;
+			background: url(images/star.png) no-repeat left bottom;
+		}
+
+		.ft p {
+			width: 100%;
+			height: 82px;
+			margin-top: 10px;
+			font-size: 14px;
+			line-height: 26px;
+			color: #323f5a;
+		}
+		.ft p a {
+			color: #3b639f;
+			text-decoration: none;
+		}
+
+	</style>
+
+	<script>
+		window.onload = function(){
+			function $(id){ return document.getElementById(id); } //id函数
+			var options = $("sele").getElementsByTagName("option");
+			//我的盒子共是80像素，一共分成 10份，每一份是 8 像素。
+			var arr= [8,7,7,7,6,8,7,8,8,8,6,8];  //存放运势
+			var txtArr= [
+			"进入工作日，你的斗志状态也达到顶峰，今天你可能会非常实际，注重自己的理财规划和收入多寡，金...<a href='#'>[详细]</a>",
+			"今日你的个人状态开始回升了，对自己的目标也将更加明确，学习运很棒，能够聚精会神，效率倍增。...<a href='#'>[详细]</a>",
+			"慵懒的生活是你今天的写照，迷迷糊糊起不起劲，更希望用缓慢的步调来解决问题。虽然你很享受内在...<a href='#'>[详细]</a>",
+			"虽然可能会接触一些社交时候的地雷，但你与他人关系越来越紧密了，主动面对就能解决很多问题。伴...<a href='#'>[详细]</a>",
+			"职场上口舌不断，工作压力会让你神经紧绷，小人问题也需要注意。但是你的状态就调整得不错，甚至...<a href='#'>[详细]</a>",
+			"今天的你学习状态不错，能够聚精会神面对功课上的事物，偶尔也要放松一下身心，注意劳逸结合。不...<a href='#'>[详细]</a>",
+			"潜在灵感帮助你的工作状态渐入佳境，虽然你效率并不高，但解决问题的能力越来越强，各种体验也开...<a href='#'>[详细]</a>",
+			"今天的你非常适合拉近与其他人的关系，约会、谈合作、跑客户都是绝佳的一天。你洞察力十足，能够...<a href='#'>[详细]</a>",
+			"今天是你聚焦在工作的一天，十分忙碌，对财富也越来越有野心。目前你很努力开垦物质。但也需要小...<a href='#'>[详细]</a>",
+			"今天是非常适合约会的一天！你能感受到良好的情感关系，适合与另一半一起规划未来，聊聊情话。精...<a href='#'>[详细]</a>",
+			"心思不在工作上，却有很多任务突如袭来，让你的内心感到忙碌不已，甚至点焦躁。今天的你总体状态...<a href='#'>[详细]</a>",
+			"今日你社交十分繁忙，有各种业务联络。情感关系将成为你生活的重心，你很在意与他人的互动，也渴...<a href='#'>[详细]</a>",
+			];
+
+			for(var i=0,len=options.length;i<len;i++){
+				options[i].onclick = function(){
+					$("ico").style.backgroundPosition= "0 "+(-this.value*50)+"px";
+					//索引号(利用其值可获得) 乘以  50 的关系，但是 是负数。
+					$("stAR").style.width= arr[this.value]*8+"px";
+					$("content").innerHTML= txtArr[this.value];
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="hd">
+			<h2><a href="#">星座运势</a></h2>
+		</div>
+		<div class="bd">
+			<div class="bd-t" id="ico"></div>
+			<div class="bd-b">
+				<select name="" id="sele">
+					<option value="0">白羊座(03.21-04.19)</option>
+					<option value="1">金牛座(04.20-05.20)</option>
+					<option value="2">双子座(05.21-06.21)</option>
+					<option value="3">巨蟹座(06.22-07.22)</option>
+					<option value="4">狮子座(07.23-08.22)</option>
+					<option value="5">处女座(08.23-09.22)</option>
+					<option value="6" selected="selected">天秤座(09.23-10.23)</option>
+					<option value="7">天蝎座(10.24-11.22)</option>
+					<option value="8">射手座(11.23-12.21)</option>
+					<option value="9">摩羯座(12.22-01.19)</option>
+					<option value="10">水瓶座(01.20-02.18)</option>
+					<option value="11">双鱼座(02.19-03.20)</option>
+				</select>
+				<div class="bd-bb">
+					今日运势：
+					<span class="yunshi">
+						<span class="star" id="stAR"></span>
+					</span>
+				</div>				
+			</div>
+		</div>
+		<div class="ft">
+			<p id="content">
+				潜在灵感帮助你的工作状态渐入佳境，虽然你效率并不高，但解决问题的能力越来越强，各种体验也开...
+				<a href="#">[详细]</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

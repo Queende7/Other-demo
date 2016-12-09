@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>【优化~避免代码重复】项卡、tab栏切换效果 </title>
+	<style>	
+		.box {
+			width: 400px;	
+			margin: 100px auto;
+			border: 1px solid #ccc;
+		}
+		.top button {
+			border: 0 none;
+		}
+		.bottom div {
+			width: 100%;	
+			height: 300px;	
+			background-color: pink;
+			display: none;
+		}
+		.pink {
+			background-color: pink;
+		}
+		
+		.bottom .show {   /* 注：注意样式的权重问题，若不加.bottom，会被.bottom div 的样式覆盖。就显示不出来。 */
+			display: block;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var btns = document.getElementsByTagName("button");
+			var divs = document.getElementById("divs").getElementsByTagName("div");
+
+			for(var i=0,len=btns.length;i<len;i++){
+				btns[i].index= i;
+				btns[i].onclick = function(){
+					for(var j=0;j<len;j++){
+						btns[j].className= "";
+						divs[j].className= "";				
+					}
+					this.className= "pink";
+					divs[this.index].className= "show";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="top">	
+			<button>大牌</button>
+			<button>男装</button>
+			<button>女装</button>
+			<button>鞋靴</button>
+			<button>箱包</button>
+			<button>内衣配饰</button>
+		</div>
+		<div class="bottom" id="divs">			
+			<div class="show">1、“大牌” 盒子</div>
+			<div>2、“男装” 盒子</div>
+			<div>3、“女装” 盒子</div>
+			<div>4、“鞋靴” 盒子</div>
+			<div>5、“箱包” 盒子</div>
+			<div>6、“内衣配饰” 盒子</div>
+		</div>
+	</div>
+</body>
+</html>

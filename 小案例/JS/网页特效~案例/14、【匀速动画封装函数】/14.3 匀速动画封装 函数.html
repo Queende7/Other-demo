@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>匀速动画封装 函数</title>
+	<style>
+		#move {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn200">200</button>
+	<button id="btn400">400</button>
+	<div id="move"></div>
+</body>
+</html>
+<script>
+	function $(id){ return document.getElementById(id); }
+	var btn200 = $("btn200");
+	var btn400 = $("btn400");
+	var move = $("move");
+	btn200.onclick = function(){
+		animate(move,200,5);
+		// 第一个参数：谁在动。 第二参数：目标位置。 第三个参数（可有可无）： 步长。
+	}
+	btn400.onclick = function(){
+		animate(move,400,10);
+	}
+
+	// 封装匀速运动。
+	function animate(obj,target,speed){
+		clearInterval(obj.timer);  // 先清除定时器。
+		var Speed = obj.offsetLeft < target ? speed : -speed; // 若对象盒子的左边距离大于 目标位置，则应往回滑动。
+
+		obj.timer = setInterval(function(){
+			var result = obj.offsetLeft - target;
+			console.log(obj.offsetLeft);
+			console.log(target);			
+			obj.style.left = obj.offsetLeft + Speed +"px";
+			if(Math.abs(result) <= speed){  // 当差值小于“步长” 时
+				clearInterval(obj.timer); // 清除定时器。
+				obj.style.left= target + "px";  // 有 步长 大小的差距   我们直接跳转目标位置
+			}
+		},30);
+	}
+</script>

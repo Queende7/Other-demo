@@ -1,0 +1,887 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"at",
+				"atSome\t(06 腾讯微博.html)"
+			],
+			[
+				"ats",
+				"atSomeList"
+			],
+			[
+				"fri",
+				"friend"
+			],
+			[
+				"fr",
+				"friendsList"
+			],
+			[
+				"in",
+				"insertFace\t(06 腾讯微博.html)"
+			],
+			[
+				"fe",
+				"friendDiv"
+			],
+			[
+				"fac",
+				"faceDiv"
+			],
+			[
+				"jqe",
+				"jquery-ui.min.js"
+			],
+			[
+				"laz",
+				"lazyload"
+			],
+			[
+				"wjx",
+				"wjx_none"
+			],
+			[
+				"wj",
+				"wjx_sel"
+			],
+			[
+				"click",
+				"clicked"
+			],
+			[
+				"line",
+				"inline-block"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"ali",
+				"alert(\"我是click事件"
+			],
+			[
+				"to",
+				"topHeigth"
+			],
+			[
+				"do",
+				"docScrollTop"
+			],
+			[
+				"bg",
+				"background-color\t(360图片导航效果 index.html)"
+			],
+			[
+				"s",
+				"speed"
+			],
+			[
+				"div",
+				"div,p"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"fade",
+				"fadeOut\t(右下角的弹出广告index.html)"
+			],
+			[
+				"fad",
+				"fadeIn\t(右下角的弹出广告index.html)"
+			],
+			[
+				"slide",
+				"slideDown\t(右下角的弹出广告index.html)"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"cl",
+				"clearQueue"
+			],
+			[
+				"ar",
+				"args"
+			],
+			[
+				"bt",
+				"button:eq(3"
+			],
+			[
+				"en",
+				"enter"
+			],
+			[
+				"i",
+				"liItem"
+			],
+			[
+				"li",
+				"li04"
+			],
+			[
+				"g",
+				"gold"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"ul",
+				"ulList"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"demo",
+				"demo1"
+			],
+			[
+				"ae",
+				"alert"
+			],
+			[
+				"sho",
+				"showName"
+			],
+			[
+				"p",
+				"Person"
+			],
+			[
+				"se",
+				"setInterval"
+			],
+			[
+				"on",
+				"onmouseover\t(slider01.js)"
+			],
+			[
+				"set",
+				"setInterval\t(slider01.js)"
+			],
+			[
+				"ti",
+				"timer\t(slider01.js)"
+			],
+			[
+				"clas",
+				"className"
+			],
+			[
+				"scr",
+				"scrollWidth"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"sc",
+				"scrollWidth"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"slid",
+				"slider_ctrl"
+			],
+			[
+				"sap",
+				"spans\t(slider01.js)"
+			],
+			[
+				"sli",
+				"slider_ctrl"
+			],
+			[
+				"js",
+				"js_slider\t(仿网易轮播图 js.html)"
+			],
+			[
+				"fa",
+				"flag"
+			],
+			[
+				"z",
+				"zIndex\t(demo.html)"
+			],
+			[
+				"dument",
+				"document.getElementById(\"wrap\t(demo.html)"
+			],
+			[
+				"leng",
+				"length"
+			],
+			[
+				"img",
+				"imgs"
+			],
+			[
+				"slider-c",
+				"slider-ctrl-prev\t(仿网易轮播图 js.html)"
+			],
+			[
+				"span",
+				"spans"
+			],
+			[
+				"ig",
+				"imgs"
+			],
+			[
+				"cur",
+				"current\t(wangyi.css)"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"url",
+				"url()"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"B",
+				"Bt"
+			],
+			[
+				"c",
+				"current"
+			],
+			[
+				"get",
+				"getStyle"
+			],
+			[
+				"t",
+				"timer"
+			],
+			[
+				"au",
+				"autoPlay\t(简单焦点图 js.html)"
+			],
+			[
+				"ol",
+				"olLis"
+			],
+			[
+				"re",
+				"result\t(简单焦点图 js.html)"
+			],
+			[
+				"tim",
+				"timer\t(简单焦点图 js.html)"
+			],
+			[
+				"lengt",
+				"length-1"
+			],
+			[
+				"bo",
+				"box"
+			],
+			[
+				"ou",
+				"onmouseout\t(简单焦点图js.html)"
+			],
+			[
+				"cu",
+				"current"
+			],
+			[
+				"time",
+				"timer"
+			],
+			[
+				"te",
+				"timer"
+			],
+			[
+				"btn",
+				"btn200"
+			],
+			[
+				"tar",
+				"targetId"
+			],
+			[
+				"ta",
+				"target"
+			],
+			[
+				"mo",
+				"mouseY"
+			],
+			[
+				"mou",
+				"mouseX"
+			],
+			[
+				"m",
+				"mouseY"
+			],
+			[
+				"gt",
+				"getSelection"
+			],
+			[
+				"clie",
+				"clientX\t(10 选定文字弹出层 js.html)"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"eve",
+				"event"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"cli",
+				"clientWidth"
+			],
+			[
+				"client",
+				"clientWidth"
+			],
+			[
+				"docu",
+				"document"
+			],
+			[
+				"sty",
+				"styleCss"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"ht",
+				"height"
+			],
+			[
+				"docuemnt",
+				"documentElement"
+			],
+			[
+				"H",
+				"height"
+			],
+			[
+				"scro",
+				"scroll().top"
+			],
+			[
+				"class",
+				"className\t(demo css部分.html)"
+			],
+			[
+				"nav",
+				"navTop"
+			],
+			[
+				"na",
+				"navTop\t(demo css部分.html)"
+			],
+			[
+				"document",
+				"documentElement"
+			],
+			[
+				"page",
+				"pageYOffset"
+			],
+			[
+				"pa",
+				"pageXOffset\t(02.html)"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"cn",
+				"contentTop"
+			],
+			[
+				"ba",
+				"barTop"
+			],
+			[
+				"onmou",
+				"onmousemove"
+			],
+			[
+				"conte",
+				"contentTop"
+			],
+			[
+				"content",
+				"contentTop\t(02 模拟垂直滚动条.html)"
+			],
+			[
+				"bar",
+				"barTop"
+			],
+			[
+				"so",
+				"scroll"
+			],
+			[
+				"d",
+				"d_box"
+			],
+			[
+				"off",
+				"offsetTop\t(01 拖拽案例l另外写法.html)"
+			],
+			[
+				"offse",
+				"offsetLeft\t(01 拖拽案例l另外写法.html)"
+			],
+			[
+				"l",
+				"Left"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"lef",
+				"leftValue"
+			],
+			[
+				"bi",
+				"bigImage"
+			],
+			[
+				"lea",
+				"leaderY"
+			],
+			[
+				"lead",
+				"leaderX"
+			],
+			[
+				"rig",
+				"right"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"margin",
+				"margin-left"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 196.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"reload",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"RENAME",
+				"Emmet: Rename Tag"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Emmet",
+				"Toggle Comment"
+			],
+			[
+				"converto",
+				"ConvertToUTF8: Reload with Encoding"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/review/06QQ微博.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/jQuery三天复习.md",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/review/06 【QQ微博评论】/06 腾讯微博.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/review/js/06QQweibo.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/review/js/06weibo.js",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/review/06 【QQ微博评论】/06 QQ微博.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/review/js/06weibo.js",
+		"/C/app/test.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/review/04城市选择案例.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/review/03回到顶部案例.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/review/02动态创建表格.html",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/snippets/htmlmyjq.sublime-snippet",
+		"/F/传智博客（前端开发）/就业班/02JQuery/jQuery-马伦复习/案例/review/01 代码段创建.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/问题汇总.md",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/jQuery-马伦（复习）/案例/jQuery三天复习.md",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/18【 jQuery UI】.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/jQueryDemos/node_modules/jquery/README.md",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/jQueryDemos/jQueryUI/jquery-ui.min.js",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/17 jquery 懒加载.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/16 背景色动画效果.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/15 jquery 扩展插件.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/14 data方法.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/demos/09全局冲突案例.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/demos/08五角星评论案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/案例/08 五角星评分案例/08 五角星评分案例.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/jQuery知识点大纲.md",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/JQuery（下午）/demos/07图片跟随鼠标.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/案例/07 鼠标跟随效果/07  鼠标跟随效果.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/4-源代码/知识点/07 事件对象.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/4-源代码/案例/03 鼠标跟随效果/index.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/4-源代码/知识点/06 触发事件.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/4-源代码/知识点/05 解绑事件.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/03-jQuery基础第三天（jQueryUI）/4-源代码/知识点/04 jQuery事件.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/案例/06 两侧跟随的广告/06 两侧跟随的广告.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/案例/05 固定导航栏案例/固定导航栏案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/04 360图片导航效果/360图片导航效果 index.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/03-jQuery基础第三天jQueryUI/code练习/08 height和width.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/03 Tab 切换/03 Tab切换.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/07 index方法.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/03 Tab 切换/03 Tab切换 - again.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/02-jQuery基础第二天/案例/-2tab切换/index.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/06 jQuery操作样式.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/02-jQuery基础第二天/案例/1右下角的弹出广告/index.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/02 右下角的弹出广告/右下角的弹出广告 again.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/02 右下角的弹出广告/右下角的弹出广告index.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/02 tab切换/index.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/01 下拉菜单/10 下拉菜单案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/01 下拉菜单/下拉菜单案例-again.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/案例/01 下拉菜单/下拉菜单案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/案例/下拉菜单/10 下拉菜单案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/02 动画效果-滑动.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/04 stop停止动画.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/05 stop停止动画.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/案例/01 下拉菜单/12 下拉菜单案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/03 动画效果-其他动画效果.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/code练习/01 动画效果-基本.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/03 stop停止动画.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/下拉菜单/10 下拉菜单案例.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/02 动画效果-其他动画效果.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/02 动画效果-滑动 - 副本.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/02 动画效果-滑动.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/01 动画效果-基本.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/02-jQuery基础第二天/案例/jquery-1.11.1.js",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/09 jQuery对象跟DOM对象相互转换.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/08 mouseover和mouseenter事件的区别.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/07 筛选选择器.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/06 属性选择器.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/05 基本过滤选择器.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/08 层级关系.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/05 jQuery选择器.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/07 层级选择器.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/06 css方法回顾.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/js与jQuery入口函数执行时机.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/04 jQuery详细介绍.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/02 jQuery解决问题.html",
+		"/F/传智博客（前端开发）/就业班/02JQuery/01-jQuery基础第一天jQuery使用和选择器/code练习/01 jQuery基本使用.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/JQuery/JQuery/01-jQuery基础第一天（jQuery使用和选择器）/4-源代码/jquery-1.11.1.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/27、下拉菜单（面向对象版本）/下拉菜单（面向对象版本）.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/27、下拉菜单/下拉菜单（面向对象版本）.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/27、下拉菜单/下拉菜单.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/26、prototype 原型（对象）/prototype 原型（对象）.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象声明01.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象遍历方式02.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象遍历方式01.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/16 函数版本的对象.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象操作方式01.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象声明02（常用）.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象声明03（常用）.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/6、对象的声明与操作/code/对象声明04（快速声明~简洁方式）.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/4、函数声明与应用/code/函数03-回调函数.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/4、函数声明与应用/code/回调函数callback例子.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/4、函数声明与应用/code/函数01.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/4、函数声明与应用/code/函数02.html",
+		"/E/【2016Web前端开发】/基础/4、JS(高洛峰)/4、函数声明与应用/code/函数04.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/11 【选项卡、tab栏切换效果】/【方式二】/选项卡、tab栏切换(闭包+节流).html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/24、选项卡、tab栏切换~封装(闭包)/选项卡、tab栏切换(闭包+节流) .html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/25、屏幕缩放事件（闭包版本）/屏幕缩放事件（闭包+节流）.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/25、屏幕缩放事件（闭包版本）/屏幕缩放事件（闭包版本）.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/24、选项卡、tab栏切换~封装(闭包)/02. 闭包原理、传递参数.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/06 闭包原理again.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/07 闭包传递参数.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/05 闭包常用写法.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/08 事件传递参数.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/16-前端基本功-网页特效6/16-前端基本功-网页特效6/案例/10 立即执行函数.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/11 【选项卡、tab栏切换效果】/【方式二】/选项卡、tab栏切换~封装.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/11 【选项卡、tab栏切换效果】/【方式二】/选项卡、tab栏切换~封装（闭包）.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/11 【选项卡、tab栏切换效果】/【方式二】/选项卡、tab栏切换效果.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/仿网易轮播图 again.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/js/again/slider02.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/js/slider01.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/03 仿网易轮播图/js/slider.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/css/wangyi.css",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/仿网易轮播图 css.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/js/animate.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/仿网易轮播图 js.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/04 旋转木马轮播图/css/css.css",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/04 旋转木马轮播图/demo.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/23、【旋转木马轮播图】/旋转木马轮播图.html",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/23、【旋转木马轮播图】/css/xuanzhuan.css",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/23、【旋转木马轮播图】/js/animate.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/19、【封装缓动框架基本函数（多个属性）~停止定时器、回调函数、透明度】/封装运动框架基本函数（多个属性）.html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/14-前端基本功-网页特效4/14-前端基本功-网页特效4/案例/13  封装运动框架基本函数 (透明度).html",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/04 旋转木马轮播图/js/animate.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/03 仿网易轮播图/js/animate.js",
+		"/E/【2016Web前端开发】/基础/项目/小案例/JS/网页特效~案例/22、【仿网易轮播图】/js/slider.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/03 仿网易轮播图/css/css.css",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/animate.js",
+		"/F/传智博客（前端开发）/就业班/基础班（集合）/课件/前端基本功/前端基本功/15-前端基本功-网页特效5/15-前端基本功-网页特效5/案例/01  封装运动框架基本函数 (更改完毕兼容性).html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"40",
+			"></",
+			";",
+			"<button>切换</button>",
+			"flag",
+			"jpg",
+			"\t$(\"btn400\").onclick = function(){\n\t\tanimate($(\"box\"),400);  \n\t}\n",
+			"\t\t\n",
+			";\n",
+			"\";\n",
+			";\n",
+			"\t\t\n",
+			">\n",
+			"天王盖地虎，小鸡炖蘑菇",
+			");\n",
+			"();",
+			"></",
+			";\n",
+			"></",
+			"\">\n",
+			"\t\t\t<li>\n\t\t\t\t<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>\n\t\t\t</li>\n",
+			"$(\"txt\").oninput=function(){  /*oninput事件不兼容IE6/7/8*/\n\t\t\t\tif(this.value == \"\"){\n\t\t\t\t\t$(\"message\").style.display= \"block\";\n\t\t\t\t}else{\n\t\t\t\t\t$(\"message\").style.display= \"none\";\t\t\n\t\t\t\t}\n\t\t\t}",
+			"$(\"txt\").onclick =function(){\n\t\t\t\t$(\"message\").style.display= \"none\"\n\t\t\t}",
+			")\");\n",
+			"fn(\"li01\",\"url(images/01big.jpg)\");",
+			"url",
+			"getElementById",
+			");\n",
+			"\">\n",
+			"\" ",
+			"pic1",
+			"\"></",
+			"818496",
+			">\n",
+			"\"></",
+			"cl",
+			"51",
+			"53",
+			"left",
+			"yellowgreen",
+			"float",
+			"{\n",
+			"\t\t.word-spacingdemo {\n\t\t\tword-spacing: 20px;\t\n\t\t}",
+			"block",
+			"></",
+			"广州",
+			"我是一段落标签",
+			"pre标签定义预格式文本，保留文本的原有格式",
+			"br",
+			"31",
+			"option",
+			"参数"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "06 腾讯微博.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 81.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航栏-筋斗云效果</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		ul { list-style: none; }
+		body { background-color: #333; }
+		a { text-decoration: none; }
+		#nav {
+			width: 800px;
+			height: 42px;
+			border-radius: 5px;
+			background: url(images/rss.png) no-repeat right center #fff;
+			margin: 100px auto;
+			position: relative;
+		}
+		.cloud {
+			width: 83px;
+			height: 42px;
+			background: url(images/cloud.gif) no-repeat;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#nav ul {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#nav ul li {
+			float: left;
+			width: 83px;
+			height: 42px;
+			line-height: 42px;
+			text-align: center;
+		}
+		#nav li a {
+			color: #000;			
+		}
+	</style>
+</head>
+<body>
+	<div id="nav">
+		<span class="cloud" id="cloud"></span>
+		<ul>
+			<li><a href="#">首页新闻</a></li>
+			<li><a href="#">师资力量</a></li>
+			<li><a href="#">活动策划</a></li>
+			<li><a href="#">企业文化</a></li>
+			<li><a href="#">招聘信息</a></li>
+			<li><a href="#">公司简介</a></li>
+			<li><a href="#">上海校区</a></li>
+			<li><a href="#">广州校区</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+<script>
+	var nav = document.getElementById("nav");
+	var lis = nav.children[1].children;
+	var cloud = document.getElementById("cloud");
+	var leader = 0;target= 0;
+	var current = 0;  // 存放 点击时的 offsetLeft
+
+	for(var i=0;i<lis.length;i++){
+		lis[i].onmouseover = function(){
+			target = this.offsetLeft;   // 把对象的offsetLeft（子盒子到定位父盒子的边框到边框的距离）
+		}
+		lis[i].onmouseout = function(){
+			target = current;
+		}
+		lis[i].onclick = function(){
+			current = this.offsetLeft;
+		}
+	}
+
+	// 缓动动画 公式：
+	setInterval(function(){
+		leader = leader + (target - leader)/10;
+		cloud.style.left= leader + "px";
+	},10);
+</script>

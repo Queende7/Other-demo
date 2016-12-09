@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动 css部分</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        img { 
+            /*display: block;*/  
+            vertical-align: top;    /* 消除图片的底部 3 像素的 bug */
+        }
+        .box {
+            width: 600px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            position: relative;
+        }
+        .box ul {
+            width: 400%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box ul li {
+            float: left;            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="images/01.jpg" alt=""></li>
+            <li><img src="images/02.jpg" alt=""></li>
+            <li><img src="images/03.jpg" alt=""></li>
+            <li><img src="images/04.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东轮播图~~动态小圆点</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		ul,ol {
+			list-style: none;
+		}
+		.box {
+			width: 730px;
+			height: 454px;
+			margin: 100px auto;
+			overflow: hidden;
+			position: relative;
+		}
+		.circle{
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			margin-left: -78px;
+		}
+		.circle span {
+			float: left;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background: rgba(0,0,0,.4);
+			margin:0 4px;
+			font: 14px/18px "yahei";
+			color: white;
+			text-align: center;
+		}
+		.circle span.current {
+			background-color: purple;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			//生成新的大盒子。
+			var scroll = document.getElementById("scroll");
+			var circle = document.createElement("div");
+			//circle.className= "circle";  //更改的类名。
+			circle.setAttribute("class","circle"); 
+			scroll.appendChild(circle);
+			var ulli = document.getElementById("ulli");
+			var lis = ulli.children; //ulli 的所有孩子。
+
+			//大盒子里面要放入 n个小的 span
+			for(var i=0;i<lis.length;i++){
+				var newspan = document.createElement("span"); //创建 span 节点。
+				newspan.innerHTML= i+1; //修改属性、内容。
+				circle.appendChild(newspan); //添加节点。
+			}
+
+			var child = circle.children;
+			child[2].className= "current";  //第三个孩子  添加current类名。
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="scroll">
+		<div class="slider">
+			<ul id="ulli">
+				<li><img src="images/11.jpg" alt=""></li>
+				<li><img src="images/22.jpg" alt=""></li>
+				<li><img src="images/33.jpg" alt=""></li>
+				<li><img src="images/44.jpg" alt=""></li>
+				<li><img src="images/55.jpg" alt=""></li>
+				<li><img src="images/66.jpg" alt=""></li>
+			</ul>
+		</div>
+	<!--
+		<div class="circle">
+		<span>1</span>
+		<span>2</span>
+		<span class="current">3</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		</div> 
+	-->
+	</div>
+</body>
+</html>

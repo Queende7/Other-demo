@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝滚动 css部分</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        img { 
+            /*display: block;*/  
+            vertical-align: top;    /* 消除图片的底部 3 像素的 bug */
+        }
+        .box {
+            width: 600px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            position: relative; /* 子绝父相 */
+            overflow: hidden;
+        }
+        
+        .box ul {
+            width: 400%;    /* 宽度足够宽，在一行内~容下所有图片。 */
+            position: absolute;  /* 动态效果都要用绝对定位 */
+            top: 0;
+            left: 0;
+        }
+        .box ul li {
+            float: left;   /* 浮动，使li横向 显示   */         
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="scroll">
+        <ul>
+            <li><img src="images/01.jpg" alt=""></li>
+            <li><img src="images/02.jpg" alt=""></li>
+            <li><img src="images/03.jpg" alt=""></li>
+            <li><img src="images/04.jpg" alt=""></li>
+            <li><img src="images/01.jpg" alt=""></li>
+            <li><img src="images/02.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    var scroll = document.getElementById("scroll");
+    var ul = scroll.children[0];  /*获得ul这个对象*/
+    var timer = null; /*定义一个定时器*/
+    var num =0;  /*存放ul样式中 left的值*/
+    timer = setInterval(autoPlay,10);  /*开启定时器*/
+    function autoPlay(){
+        num--;
+        num <= -1200 ? num=0 : num; /*当ul 的left值~num 大于4张图片的宽度1200，此时显示第5、6张（相当于第1、2张），应把num快速复原到： 0*/
+        ul.style.left= num+"px"; 
+    }
+
+    scroll.onmouseover = function(){  // 当鼠标经过大盒子时，停止定时器。
+        clearInterval(timer);
+    }
+    scroll.onmouseout = function(){
+        timer = setInterval(autoPlay,10);  // 开启定时器。
+    }
+</script>

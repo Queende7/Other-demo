@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简单焦点图 JS部分</title>
+	<style>
+		* { margin: 0; padding: 0; }
+		ul,ol { list-style: none; }
+		img { display: block; }
+		#box {
+			width: 500px;
+			height: 200px;
+			padding: 7px;
+			border: 1px solid #ccc;
+			margin: 100px auto;
+			position: relative;
+		}
+		#show {
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+		}
+		#show ul {
+			width: 800%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#show ul li {
+			float: left;
+		}
+		#box ol {
+			position: absolute;
+			right: 11px;
+			bottom: 11px;
+		}
+		#box ol li {
+			float: left;
+			width: 20px;
+			height: 20px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			text-align: center;
+			line-height: 20px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		#box .current {
+			background-color: yellow;
+		}
+	</style>
+	<script>
+		// 动画 封装函数：
+		function animate(obj,target){
+			clearInterval(obj.timer); // 每调用一次先清除一次定时器。
+			obj.timer = setInterval(function(){ // 开启定时器
+				var speed = obj.offsetLeft < target ? 15 : -15; // 对象左侧距离大于 目标位置 时，往回走。
+				var result = obj.offsetLeft - target;
+				obj.style.left = obj.offsetLeft + speed + "px";
+				if(Math.abs(result) <= 15){ // 当运动对象接近目标位置时，清除定时器，为避免15像素的误差，此时定位为目标位置。
+					clearInterval(obj.timer);
+					obj.style.left= target + "px";
+				}
+
+			},10);
+		}
+
+		window.onload = function(){
+			// 1、获取对象。
+			function $(id){ return document.getElementById(id); }
+			var box = $("box");
+			var show = $("show");
+			var ul = show.children[0];
+			var ulLis = ul.children;
+
+
+			// 2、操作对象
+			ul.appendChild(ul.children[0].cloneNode(true)); // 克隆 第1张图片 作为轮播图的 第6张图片。
+			// 创建 小ol 和 li。
+			var ol = document.createElement("ol");
+			box.appendChild(ol);
+			for(var i=0;i<ulLis.length-1;i++){ // 遍历~创建 小ol 和 li。注：ul中li长度=6，而ol中li长度=5。
+				var li = document.createElement("li"); // 创建li元素 节点。
+				li.innerHTML= i+1;
+				ol.appendChild(li);	
+			}
+
+			// 设置动画(鼠标手动放上去，滚动)
+			var olLis = ol.children;
+			for(var i=0;i<olLis.length;i++){
+				olLis[i].index = i;
+				olLis[i].onmouseover = function(){
+					for(var j=0;j<olLis.length;j++){
+						olLis[j].className = ""; // 清除所有。
+					}
+					this.className = "current";
+					animate(ul,-this.index*500);
+					square = key = this.index; // 以鼠标放在上面的 为主。
+				}
+			}
+			olLis[0].className = "current";
+
+			// 设置动画 定时器（自动滚动）
+			var timer = null; // 开启定时器。
+			var key = 0; // 存放 轮播图片的 张数。
+			var square = 0; // 控制ol 小方块。
+			timer = setInterval(autoPlay,1000);
+			function autoPlay(){ 
+				// a、 图片滚动：
+				key++;  // 先 ++ ,此时由 0 变 1.
+				if(key > ulLis.length - 1){ 
+				// 后判断：当播放到 第6张 图片时，立刻返回原始第1张位置（第一张和第六张一样。）
+					ul.style.left = 0; // 此时，下张应播 第2张，即 key=1；
+					key = 1 ;
+				}
+				animate(ul,-key*500);
+
+				// b、 小方块滚动变化
+				square++; // 先 ++ ，此时由 0 变 1.
+				if(square > olLis.length-1){ // 当square等于 5时，到了最后一个（即第一个）
+					square = 0;
+				}
+				// 遍历小方块的 背景色。(不是方块动画)
+				for(var i=0;i<olLis.length;i++){
+					olLis[i].className = "";
+				}
+				olLis[square].className = "current";
+			}
+
+			// 结束：
+			box.onmouseover = function(){
+				clearInterval(timer);
+			}
+			box.onmouseout = function(){
+				timer = setInterval(autoPlay,1000);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<div id="show">
+			<ul>
+				<li><img src="images/taobao/1.jpg" alt=""></li>
+				<li><img src="images/taobao/2.jpg" alt=""></li>
+				<li><img src="images/taobao/3.jpg" alt=""></li>
+				<li><img src="images/taobao/4.jpg" alt=""></li>
+				<li><img src="images/taobao/5.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

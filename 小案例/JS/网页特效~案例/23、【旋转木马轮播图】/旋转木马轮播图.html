@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转木马轮播图</title>
+    <link rel="stylesheet" href="css/xuanzhuan.css"/>
+</head>
+<body>
+<div class="wrap" id="wrap">
+   <div class="slide" id="slide">
+       <ul>
+           <li><a href="#"><img src="images/slidepic1.jpg" alt=""/></a></li>
+           <li><a href="#"><img src="images/slidepic2.jpg" alt=""/></a></li>
+           <li><a href="#"><img src="images/slidepic3.jpg" alt=""/></a></li>
+           <li><a href="#"><img src="images/slidepic4.jpg" alt=""/></a></li>
+           <li><a href="#"><img src="images/slidepic5.jpg" alt=""/></a></li>
+       </ul>
+       <div class="arrow" id="arrow">
+           <a href="javascript:;" class="prev"></a>
+           <a href="javascript:;" class="next"></a>
+       </div>
+   </div>
+</div>
+</body>
+</html>
+<script src="js/animate.js" type="text/javascript"></script>
+<script>
+    var wrap = document.getElementById("wrap");
+    var slider = document.getElementById("slide");
+    var arrow = document.getElementById("arrow");
+    var lis = document.getElementsByTagName("li");
+    wrap.onmouseover = function(){
+        animate(arrow,{opacity:100});
+    }
+    wrap.onmouseout = function(){
+        animate(arrow,{opacity:0});
+    }
+
+    //  存储了每个图片的信息
+    var json = [
+        {   //  第 1 张
+            width:400,
+            top:20,
+            left:50,
+            opacity:20,
+            z:2
+        },
+        {  // 第 2 张
+            width:600,
+            top:70,
+            left:0,
+            opacity:80,
+            z:3
+        },
+        {   // 第 3 张
+            width:800,
+            top:100,
+            left:200,
+            opacity:100,
+            z:4
+        },
+        {  // 第 4 张
+            width:600,
+            top:70,
+            left:600,
+            opacity:80,
+            z:3
+        },
+        {   // 第 5 张
+            width:400,
+            top:20,
+            left:750,
+            opacity:20,
+            z:2
+        }
+    ];
+
+    var as = arrow.children;
+    change();
+    //  两个按钮点击事件
+    var jieliu = true; // 用来控制函数节奏的 变量 (利用回调函数~动画执行完后，执行回调函数)
+    for(var k in as){
+        as[k].onclick = function(){
+            if(this.className == "prev"){
+                if(jieliu == true){
+                    change(false);
+                    jieliu = false; // 点击完毕之后，立马取反
+                }
+            }else{
+                if(jieliu == true){
+                    change(true);
+                    jieliu = false;
+                }
+            }
+        }
+    }
+
+    function change(flag){
+        if(flag){
+            // 把 最后一个json 删除   并且把最后一个添加到json 第一个位置
+            json.unshift(json.pop());
+        }else{
+            // 移除第一个 ， 放到json 最后一个
+            json.push(json.shift());
+        }
+        for(var i=0;i<json.length;i++){
+            animate(lis[i],{
+            width: json[i].width,
+            top: json[i].top,
+            left: json[i].left,
+            opacity: json[i].opacity,
+            zIndex: json[i].z
+            },function(){ jieliu = true; });   // 回调函数是等动画执行完毕  才执行。          
+        }
+    }
+
+</script>

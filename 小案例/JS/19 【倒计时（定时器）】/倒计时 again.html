@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>倒计时 again</title>
+ 	<style>
+ 		.box {
+ 			font-size: 30px;
+ 			text-align: center;
+ 			color: red;
+ 			margin: 50px auto;
+ 		}
+
+ 	</style>
+ 	<script>
+ 		window.onload = function(){
+
+ 			var demo = document.getElementById("demo");
+ 			var endTime = new Date("2016-11-11 00:00:00");
+ 			setInterval(fn,1000);
+
+ 			function fn(){
+	 			var nowTime = new Date();
+	 			var msecond = parseInt((endTime.getTime()-nowTime.getTime())/1000);
+	 			var d = parseInt(msecond / 3600 / 24); //天数。
+	 			var h = parseInt(msecond / 3600 % 24); //小时。
+	 			var m = parseInt(msecond / 60 % 60); //分钟。
+	 			var s = parseInt(msecond % 60); //秒。
+	 			d<10 ? d="0"+d : d;
+	 			h<10 ? h="0"+h : h;
+	 			m<10 ? m="0"+m : m;
+	 			s<10 ? s="0"+s : s;
+	 			demo.innerHTML= "距离双十一抢购活动还剩："+d+"天 "+h+"小时 "+m+"分钟 "+s+"秒";
+ 			} 
+ 		}
+ 	</script>
+ </head>
+ <body>
+ 	<div class="box" id="demo">
+ 		
+ 	</div>
+ </body>
+ </html>

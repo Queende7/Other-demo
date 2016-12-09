@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>封装自己的scrollTop left 01</title>
+	<style>
+		body {
+			height: 3000px;
+		}
+	</style>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	
+	function scroll(){
+		if(window.pageYOffset != null){  // IE9+ 、最新浏览器
+			return {
+				left: window.pageXOffset,
+				top: window.pageYOffset
+			}
+		}else if(document.compatMode == "CSS1Compat"){  // 火狐 、其他浏览器，声明了 DTD.
+			return {
+				left: document.documentElement.scrollLeft,
+				top: document.documentElement.scrollTop
+			}
+		}else{
+			left: document.body.scrollLeft;
+			top: document.body.scrollTop;	
+		}
+	}
+
+	window.onscroll = function(){
+		console.log(scroll().top);
+	}
+</script>

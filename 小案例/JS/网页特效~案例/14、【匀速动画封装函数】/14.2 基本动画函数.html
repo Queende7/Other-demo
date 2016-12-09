@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本动画函数</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn200">200</button>
+	<button id="btn400">400</button>
+	<div id="box"></div>
+</body>
+</html>
+<script>
+	function $(id){ return document.getElementById(id); }
+	$("btn200").onclick = function(){
+		animate($("box"),200);   // animate 自定义函数
+		// 函数： 第一个参数：谁在动画； 第二个参数：目标位置
+	}
+	$("btn400").onclick = function(){
+		animate($("box"),400);
+	}
+
+	// 动画函数：
+	function animate(obj,target){ 
+		// 对象的属性timer ，作为变量存储定时器。
+		obj.timer = setInterval(function(){
+			if(obj.offsetLeft > target){ // 移动超过目标位置时，清除定时器。
+				clearInterval(obj.timer);
+			}
+			obj.style.left = obj.offsetLeft + 10 +"px";
+		},20);
+		
+	}
+</script>

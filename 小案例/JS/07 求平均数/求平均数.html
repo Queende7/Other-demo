@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求平均数</title>
+</head>
+<body>
+	<script>
+		var arr = [15,25,45,30,70,25];
+		function avg(array){   //封装求平均值函数
+			var len=arr.length;
+			var sum=0;
+			for(var i=0;i<len;i++){
+				sum += arr[i];
+				// sum=sum+arr[i];
+			}
+			return sum/len;
+		}
+
+		document.write("数组的平均数为"+avg(arr));
+	</script>
+</body>
+</html>

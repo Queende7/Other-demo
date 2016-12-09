@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5秒之后自动跳转页面</title>
+	<style>
+		#tips {
+			width: 400px;
+			height: 200px;
+			border: 1px solid #ccc;
+			margin: 50px auto;
+			font: 16px/200px "yahei";
+			text-align: center;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="tips">
+		
+	</div>
+</body>
+</html>
+<script>
+	var tips = document.getElementById("tips");
+	var speed = 1000;
+	var count =5;
+	setTimeout(goIndexPage,speed); // 1秒后执行 goIndexPage这个函数。
+	function goIndexPage(){
+		count--;
+		tips.innerHTML= "<a href='http://www.baidu.com'>页面没有找到&nbsp;&nbsp;"+count+"秒之后自动跳转页面！</a>"
+		if(count <=0){
+			// 如果 count 等于 0就到了时间，会跳转页面。
+			window.location.href= "http://www.baidu.com";
+		}else{
+			//setTimeout(goIndexPage,speed); // 递归调用  自己调用自己。
+			setTimeout(arguments.callee,speed); //rguments.callee,  代替函数名goIndexPage 本身-----使用函数递归调用时 推荐使用。
+		}
+	}
+</script>

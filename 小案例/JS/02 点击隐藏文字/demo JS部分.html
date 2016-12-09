@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索框 点击隐藏文字 JS部分</title>
+    <style>
+        input,button {
+            border: 0 none;
+            padding: 0;
+        }
+        .search {
+            width: 258px;
+            height: 40px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+        .search input {
+            float: left;
+            width: 208px;
+            height: 40px;
+            background: url(images/left.jpg) no-repeat;
+            padding-left: 8px;
+            outline-style: none;/*  去除点击时出现的默认蓝色框框 */
+            color: #ccc;
+        }
+        .search button {
+            float: left;
+            width: 42px;
+            height: 40px;
+            background: url(images/right.jpg) no-repeat;
+            cursor: pointer;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function(){
+
+            var txt = document.getElementById("txt");
+
+            txt.onfocus = function(){
+                // 什么时候该清空？
+                // 用户没有输入的时候，第一次使用的时候
+                // 若input的值为初始默认值，则获得焦点时应清空
+                if(txt.value == "请输入..."){
+                    txt.value= "";
+                    txt.style.color= "#333";
+                }
+            }
+            txt.onblur = function(){
+                if(txt.value == ""){
+                    txt.value="请输入...";
+                    txt.style.color= "#ccc";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="search">
+        <input type="text" value="请输入..." id="txt">
+        <button></button>
+    </div>
+</body>
+</html>

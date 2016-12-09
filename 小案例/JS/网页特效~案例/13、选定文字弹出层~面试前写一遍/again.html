@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选中文字弹出层 again</title>
+	<style>
+		div {
+			width: 400px;
+			margin: 50px;
+			text-indent: 2em;
+		}
+		#demo {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="test">
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+		沙发沙发是否安抚安抚阿发是否安抚为发违法阿斯蒂芬阿发
+	</div>
+	<div class="another">
+		选中文字不弹出  选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出选中文字不弹出
+	</div>
+	<span id="demo"></span>
+</body>
+</html>
+<script>
+	function $(id){ return document.getElementById(id); }
+	$("test").onmouseup = function(event){
+		var event = event || window.event;
+		var mouseX = event.clientX;
+		var mouseY = event.clientY;
+		var txt;
+		if(window.getSelection){  // 获得用户选择内容
+			txt = window.getSelection().toString();
+		}else{
+			txt = document.selection.createRange().text;
+		}
+		if(txt){
+			showBox(mouseX,mouseY,txt);			
+		}
+	}
+	document.onmousedown = function(event){
+		var event = event || window.event;
+		var targetId = event.target ? event.target.id : event.srcElement.id;
+		if(targetId != "demo"){
+			$("demo").style.display= "none";
+		}
+	}
+
+	function showBox(mouseX,mouseY,contentText){ // 操作函数。
+		$("demo").style.display= "block";
+		$("demo").style.left= mouseX+"px";
+		$("demo").style.top= mouseY+"px";
+		$("demo").innerHTML= contentText;		
+	}
+</script>

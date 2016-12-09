@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航-筋斗云效果 css部分</title>
+	<style>
+		* {
+			margin: 0; padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		body {
+			background-color: #333;
+		}
+		.nav {
+			width: 800px;
+			height: 42px;
+			background-color: #fff;
+			margin: 100px auto;
+			border-radius: 5px;
+			background: url(images/rss.png) no-repeat right center #fff;
+			position: relative;
+		}
+		.cloud {
+			width: 83px;
+			height: 42px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(images/cloud.gif) no-repeat ;
+		}
+		.nav ul {   /* 令 ul 和span 同为 绝对定位，谁在后面就优先显示谁。 */
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.nav li {
+			width: 83px;
+			height: 42px;
+			float: left;
+			line-height: 42px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<span class="cloud"></span>
+		<ul>
+			<li>首页新闻</li>
+			<li>师资力量</li>
+			<li>活动策划</li>
+			<li>企业文化</li>
+			<li>招聘信息</li>
+			<li>公司简介</li>
+			<li>上海校区</li>
+			<li>广州校区</li>
+		</ul>
+	</div>
+</body>
+</html>

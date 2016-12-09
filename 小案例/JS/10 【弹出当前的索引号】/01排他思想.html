@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>排他思想01</title>
+	<style>
+		#box {
+			margin: 50px;
+		}
+		#box button {
+			margin: 0 5px;
+		}
+		.damao {
+			background-color: pink;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			var btns = document.getElementById("box").getElementsByTagName("button");
+
+			for(var i=0;i<btns.length;i++){
+				btns[i].onclick = function(){
+					// 排除所有人，用for遍历
+					for(var j=0;j<btns.length;j++){
+						btns[j].className= "";
+					}
+
+					// 剩下自己
+					this.className= "damao";
+				}
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<button>排他思想</button>
+		<button>排他思想</button>
+		<button>排他思想</button>
+		<button>排他思想</button>
+		<button>排他思想</button>
+		<button>排他思想</button>
+		<button>排他思想</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时~定时器</title>
+	<style>
+		.box {
+			font-size: 30px;
+			text-align: center;
+			color: red;
+			margin: 50px auto;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){			
+			var demo = document.getElementById("demo");
+			var ttime = new Date("2016-11-11 00:00:00"); /*获取未来目标时间*/
+			setInterval(clock,1000); //开启定时器；
+			function clock(){
+				var ntime = new Date(); //获取目前最新时间；
+				var msecond =parseInt((ttime.getTime() - ntime.getTime())/1000);
+
+				var d = parseInt(msecond / 3600 / 24); //天数
+				var h = parseInt(msecond / 3600 % 24); //小时
+				var m = parseInt(msecond / 60 % 60); //分钟
+				var s = parseInt(msecond % 60); //秒
+				d<10 ? d="0"+d : d;
+				h<10 ? h="0"+h : h;
+				m<10 ? m="0"+m : m;
+				s<10 ? s="0"+s : s;
+
+
+				demo.innerHTML= "距离双十一抢购还剩："+d+"天 "+h+"小时 "+m+"分钟 "+s+"秒"
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- 原理：
+	1、倒计时 =  用 将来的时间  -   现在的时间  
+	2、问题：    用 毫秒减去      现在距离 1970年1    
+	                           将来时间 距离 1970 毫秒数  
+	3、用将来的毫秒数 -  现在的毫秒数   不断转换就可以了 -->
+	<div class="box" id="demo">
+		
+	</div>
+</body>
+</html>

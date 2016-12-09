@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖动水平滚动条</title>
+	<style>
+		* { margin: 0;padding: 0; }
+		#scroll {
+			width: 400px;
+			height: 8px;
+			background-color: #ccc;
+			margin: 100px;
+			position: relative;
+		}
+		.tuodong {
+			width: 10px;
+			height: 22px;
+			background-color: #369;
+			position: absolute;
+			top: -7px;
+			left: 0;
+			cursor: pointer;
+		}
+		.bg {
+			width: 0;
+			height: 100%;
+			position: absolute;
+			background-color: #369;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="scroll">
+		<div class="tuodong"></div>
+		<div class="bg"></div>
+	</div>
+	<div id="mask"></div>
+</body>
+</html>
+<script>
+	var scroll = document.getElementById("scroll");
+	var tuodong = scroll.children[0];
+	var bg = scroll.children[1];
+	var mask = document.getElementById("mask");
+
+	tuodong.onmousedown = function(event){
+		var event = event || window.event;   // 事件对象。
+		var leftVal = event.clientX - this.offsetLeft; // 获取拖动前的父盒子左侧距离。
+		var that = this; // 将tuodong对象 赋给that，以便下面使用。
+
+		document.onmousemove = function(event){
+			var event = event || window.event;
+			that.style.left= event.clientX - leftVal + "px"; // 获取拖动后，tuodong对象到父盒子的左侧距离：that.clientX - leftVal
+			var Left = parseInt(that.style.left); // 将该有单位的值转为数字，以便条件比较。
+			if(Left < 0){
+				Left = 0;
+			}else if(Left > 390){
+				Left = "390px";
+			}
+			that.style.left = Left;
+			bg.style.width= that.style.left;
+			mask.innerHTML= "此时已走了："+(parseInt(Left)/390*100).toFixed(2)+"%"; // toFixed(2), 转为 2 位小数
+		}
+		document.onmouseup = function(){
+			document.onmousemove = null  
+		}
+	}
+</script>

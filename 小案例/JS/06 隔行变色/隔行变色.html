@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色</title>
+	<style>
+		.box {
+			width: 300px;
+		}
+		.box ul {
+			list-style: none;
+		}
+		.box ul li {
+			line-height: 30px;
+		}
+		.box li span {
+			margin: 5px;
+		}
+		.current {
+			background-color: #ccc!important;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var lis = document.getElementsByTagName("li");
+			//alert(lis.length);
+			for(var i=0,len=lis.length;i<len;i++){
+				if(i%2 == 0){  /*数组序号为偶数的元素*/
+					lis[i].style.backgroundColor= "#eee";
+				}
+
+				// 鼠标经过li的时候 ，当前对象底色变亮。
+				lis[i].onmouseover = function(){
+					this.className= "current";
+				}
+				// 鼠标经过li的时候 ，当前对象底色变亮。
+				lis[i].onmouseout = function(){
+					this.className= "";
+				}			
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<ul>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+			<li>
+				<span>上证指数</span><span>3525</span><span>10-5</span><span>0.35%</span>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

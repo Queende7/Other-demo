@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$的符号封装（获取对象）again</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo"></div>
+	<div></div>
+	<div></div>
+	<div class="one"></div>
+	<div class="one"></div>
+	<div class="one"></div>
+	<div></div>
+	<div></div>
+	<div id="last"></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
+
+<script>
+	// 类名选择器 封装 ___返回含对应类名 的盒子数组，使用时需 遍历；
+	function getClass(classname){
+			// 一、如果浏览器支持，则直接返回
+			if(document.getElementsByClassName){
+				return document.getElementsByClassName(classname);
+			}else
+			// 二、不支持的浏览器 IE6 7 8
+			var arr = []; //用于存放满足的数组；
+			var dom = document.getElementsByTagName("*");//遍历所有的盒子
+			for(var i=0;i<dom.length;i++){
+				var txtarr = dom[i].className.split(" ");
+				//分割类名，返回一个类名数组，如：["demo","test","one"]
+				for(var j=0;j<txtarr.length;j++){ //遍历  通过类名分割的数组。
+					if(dom[j].className == classname){
+						arr.push(dom[i]); //我们要的是 div
+					}
+				}
+			}
+			return arr; //返回含对应类名 的盒子数组；
+		}
+
+	// 封装自己的对象获取器 $()：如  $("#demo")  ,  $(".one")  , $("div")
+	function $(str){
+		var s = str.charAt(0);
+		var ss = str.substr(1);
+		switch(s){
+			case "#":
+				return document.getElementById(ss);
+				break;
+			case ".":
+				return getClass(ss);
+				break;
+			default:
+				return document.getElementsByTagName(str);
+				break;
+		}
+	}
+
+	$("#demo").style.backgroundColor= "purple";
+	$("#last").style.backgroundColor= "purple";
+	var test= $(".one");
+	for(var i=0;i<test.length;i++){
+		test[i].style.backgroundColor= "blue";
+	}
+</script>

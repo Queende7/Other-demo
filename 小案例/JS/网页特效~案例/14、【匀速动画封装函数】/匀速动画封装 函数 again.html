@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>匀速动画封装 函数again</title>
+	<style>
+		#box {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+		}
+		#box1 {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			position: absolute;
+			top: 150px;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn200">200</button>
+	<button id="btn400">400</button>
+	<div id="box"></div>
+	<div id="box1"></div>
+</body>
+</html>
+<script>
+	function $(id){ return document.getElementById(id); }
+	$("btn200").onclick = function(){
+		animate($("box"),200);  // 自定义 动画函数。
+		// 第一个参数：谁在动。 第二个参数：目标位置。
+		animate($("box1"),200);
+	}
+	$("btn400").onclick = function(){
+		animate($("box"),400);  
+	}
+
+	function animate(obj,target){
+		clearInterval(obj.timer);
+		var speed = obj.offsetLeft < target ? 5 : -5;
+		obj.timer = setInterval(function(){
+			var result = obj.offsetLeft - target;
+			obj.style.left= obj.offsetLeft + speed +"px";
+			if(Math.abs(result) <=5){
+				clearInterval(obj.timer);
+				obj.style.left = target +"px";
+			}
+		},30);		
+	}
+	
+	/*function animate(obj,target){
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			var speed = obj.offsetLeft < target ? 15 : -15;
+			var result = obj.offsetLeft - target;
+			obj.style.left = obj.offsetLeft + speed + "px";
+			if(Math.abs(result) <= 15){
+				clearInterval(obj.timer);
+				obj.style.left= target +"px";
+			}
+
+		},10)
+	}*/
+</script>

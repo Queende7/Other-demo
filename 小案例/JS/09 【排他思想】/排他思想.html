@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>排他思想	原理</title>
+	<style>
+		.damao {
+			background-color: pink;
+		}
+
+	</style>
+	<script>
+		window.onload = function(){
+			var btns = document.getElementsByTagName("button");
+
+			for(var i=0;i<btns.length;i++){
+				btns[i].onclick = function(){
+					//点击完毕后，清除所有人
+					for( var i=0;i<btns.length;i++){
+						btns[i].className= "";
+					}
+
+					//剩下自己
+					this.className= "damao";
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<button>one排他</button>
+	<button>two排他</button>
+	<button>three排他</button>
+	<button>four排他</button>
+	<button>five排他</button>
+	<button>six排他</button>
+	<button>seven排他</button>
+</body>
+</html>

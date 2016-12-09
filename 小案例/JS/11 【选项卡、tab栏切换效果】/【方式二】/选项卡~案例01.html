@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例01~选项卡</title>
+	<style>	
+		* { margin: 0; padding: 0; }
+		.box {
+			width: 360px;	
+			margin: 100px auto;
+			border: 1px solid #ccc;
+		}
+		.top {	
+			width: 360px;	
+			overflow: hidden;
+		}
+		#top_box {
+			width: 400px;
+		}
+		.top h3 {
+			float: left;
+			width: 120px;	
+			height: 40px;
+			font: 14px/40px "yahei";
+			text-align: center;
+			border: 1px solid #ccc;
+			background: rgba(0,0,0,.05);
+			margin: -1px 0 0 -1px; /* 常用 */
+		}
+		#top_box .damao {
+			border: 1px solid #ccc;
+			border-bottom: 0 none;
+			margin: -1px 0 0 -1px;
+			background-color: white;
+			cursor: pointer;
+		}
+		#bottom {
+			width: 100%;	
+			height: 220px;	
+			padding: 10px 20px 20px;
+		}
+		#bottom div {
+			width: 320px;
+			height: 220px;
+			display: none;
+		}
+		#bottom .show {
+			display: block;
+		}
+	</style>
+
+	<script>
+		window.onload = function(){
+			var h3os = document.getElementById("top_box").getElementsByTagName("h3");
+			var divs = document.getElementById("bottom").getElementsByTagName("div");
+
+			for(var i=0,len=h3os.length;i<len;i++){
+				h3os[i].index= i;
+				h3os[i].onmouseover = function(){
+					for(var j=0;j<len;j++){
+						h3os[j].className= "";
+						divs[j].className= ""
+					}
+					this.className= "damao";
+					divs[this.index].className= "show";
+				}
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="box">	
+		<div class="top">
+			<div id="top_box">
+				<h3 class="damao">去大肚子</h3>
+				<h3>清除色斑</h3>
+				<h3>男性减肥</h3>
+			</div>	
+		</div>
+		<div id="bottom">	
+			<div class="show">
+				<img src="images/01.jpg" alt="" width="300px">
+			</div>
+			<div>
+				<img src="images/02.jpg" alt="" width="300px">
+			</div>
+			<div>
+				<img src="images/03.jpg" alt="" width="300px">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
