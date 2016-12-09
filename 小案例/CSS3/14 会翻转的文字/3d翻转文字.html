@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d翻转文字</title>
+	<style type="text/css">
+		html,body {
+			padding: 0;
+			margin: 0;
+			background-color: #f5f5f5;
+		}
+
+		.text {
+			width: 800px;
+			font: 8rem "微软雅黑";
+			margin: 200px auto;  /*注：盒子须有宽度才能水平对齐*/
+			text-align: center;
+		}
+
+		.zhi {
+			margin: 0.2rem;
+			color: #369;
+			position: relative;
+		}
+
+		.zhi:before, .zhi:after {
+			content: attr(data-zhi);
+			position: absolute;
+			top: 0;
+			left: 0;
+			/*CSS3 解决兼容性*/
+			-webkit-transform-origin: left center;
+			-moz-transform-origin: left center;
+			-ms-transform-origin: left center;
+			-o-transform-origin: left center;
+			transform-origin: left center;
+			transition: all 0.3s ease; /*过渡*/
+		}
+
+		.zhi:before {
+			color: #fff;
+			z-index: 3;
+			transform: rotateY(-15deg);
+		}
+
+		.zhi:after {
+			color: rgba(0,0,0,0.2);
+			transform: scale(1.1,1);
+			z-index: 2;
+		}
+
+		.zhi:hover:before {
+			color: #fafafa;
+			transform: rotateY(-40deg) skew(0,1deg); /*skew() 倾斜度（x，y轴）*/
+		}
+
+		.zhi:hover:after {
+			transform: scale(1.1,1) rotateY(-40deg) skew(0,20deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="text">
+		<span class="zhi" data-zhi="生">生</span>
+		<span class="zhi" data-zhi="日">日</span>
+		<span class="zhi" data-zhi="快">快</span>
+		<span class="zhi" data-zhi="樂">樂</span>
+	</div>
+</body>
+</html>
